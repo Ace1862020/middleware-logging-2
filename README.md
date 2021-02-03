@@ -11,7 +11,7 @@
 * 顯示 時間戳記(time-stamps) - 以當地時間 (台北) 顯示
 * 同時顯示 請求的 HTTP 方法
 * 同時顯示 URL
-* 同時顯示 request 與 response 的間隔時間(秒)
+* 同時顯示 request 與 response 的間隔時間 ms(毫秒) or s(秒)
 
 ## Environment Setup - 環境建置
 * Node.js(version - 10.15.0) - JavaScript 執行環境
