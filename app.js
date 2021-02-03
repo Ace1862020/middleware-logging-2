@@ -1,9 +1,13 @@
 const express = require('express')
 // 嘗試使用模組，引入 morgan
 const morgan = require('morgan')
+const exphbs = require('express-handlebars')
 const port = 3000
 
 const app = express()
+
+app.engine('handlebars', exphbs({ defaultLayout: 'main' }))
+app.set('view engine', 'handlebars')
 
 // 自訂收到的請求時間
 const requestTime = function (req, res, next) {
@@ -34,30 +38,33 @@ morgan.token('spendTime', function (req, res) {
 })
 
 //自訂設定 Format
-morgan.format('logger', ':startTime | :method from :url | total time :spendTime s')
+morgan.format('logger', ':startTime | :method from :url | total time: :total-time[0] ms(毫秒) || :spendTime s')
+
+
 
 //使用自訂的 morgan
 app.use(morgan('logger'))
 app.use(requestTime, responseTime)
 
-// 這個 /favicon.ico 是 Browser 網址標籤的圖示，Browser 預設會一直發出請求
-// 可以用在<head>的<link>的rel屬性"icon"，給href屬性"data:"
-const iconData = '<link rel="icon" href="data:;">'
 
 app.get('/', (req, res) => {
-  res.send(iconData + '列出全部 Todo')
+  const message = '列出全部 Todo'
+  res.render('index', { message })
 })
 
 app.get('/new', (req, res) => {
-  res.send(iconData + '新增 Todo 頁面')
+  const message = '新增 Todo 頁面'
+  res.render('new', { message })
 })
 
 app.get('/:id', (req, res) => {
-  res.send(iconData + '顯示一筆 Todo')
+  const message = '顯示一筆 Todo'
+  res.render('detail', { message })
 })
 
 app.post('/', (req, res) => {
-  res.send(iconData + '新增一筆  Todo')
+  const message = '新增一筆 Todo'
+  res.render('index', { message })
 })
 
 app.listen(port, () => {
