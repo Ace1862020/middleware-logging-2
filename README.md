@@ -17,7 +17,7 @@
 * Node.js(version - 10.15.0) - JavaScript 執行環境
 
 ## Built with & Tools - 建置工具
-* npm (version - 6.4.1) - Node.js 的套件管理氣
+* npm (version - 6.4.1) - Node.js 的套件管理器
 * nodemon (version - 2.0.7) - 伺服器輔助
 * Express Framework (version - 4.17.1) - 應用程式框架
 * Express-handlebars (version - 5.2.0) - 模板引擎
