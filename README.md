@@ -14,15 +14,15 @@
 * 同時顯示 request 與 response 的間隔時間 ms(毫秒) or s(秒)
 
 ## Environment Setup - 環境建置
-* Node.js(version - 10.15.0) - JavaScript 執行環境
+* ![Node.js](https://nodejs.org/en/) (version - 10.15.0) - JavaScript 執行環境
 
 ## Built with & Tools - 建置工具
-* npm (version - 6.4.1) - Node.js 的套件管理器
-* nodemon (version - 2.0.7) - 伺服器輔助
-* Express Framework (version - 4.17.1) - 應用程式框架
-* Express-handlebars (version - 5.2.0) - 模板引擎
-* Morgan (version - 1.10.0) - node.js 提供的紀錄HTTP日誌的middleware
-* Visual Stuldio Code - 開發環境
+* ![npm](https://www.npmjs.com/get-npm) (version - 6.4.1) - Node.js 的套件管理器
+* ![nodemon](https://www.npmjs.com/package/nodemon) (version - 2.0.7) - 伺服器輔助
+* ![Express](https://www.npmjs.com/package/express) Framework (version - 4.17.1) - 應用程式框架
+* ![Express-handlebars](https://www.npmjs.com/package/express-handlebars) (version - 5.2.0) - 模板引擎
+* ![Morgan](https://www.npmjs.com/package/morgan) (version - 1.10.0) - node.js 提供的紀錄HTTP日誌的middleware
+* ![Visual Stuldio Code](https://code.visualstudio.com/download) - 開發環境
 
 ## Install - 安裝
 1. 開啟終端機(Terminal) 或 (Git Bash) -> 到欲存放專案的本機位置 並執行:
